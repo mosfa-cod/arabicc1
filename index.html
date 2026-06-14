@@ -54,7 +54,7 @@
             if (currentQuestionIndex < quizQuestions.length - 1) { currentQuestionIndex++; showQuestion(); } else { sendFinalDataToSheets(); }
         }
         function sendFinalDataToSheets() {
-            const webAppUrl = "https://script.google.com/macros/s/AKfycbw3mSZiYz2Y_9X48s3tKsarK7rQ3RULB8QW7vO53cAk83gz4i33OCFexB-wZqKCtB77/exec"; 
+            const webAppUrl = "https://script.google.com/macros/s/AKfycbyY-bXA6RFCOxY3HgN76NzKi6TYcvcajhIJ3Pe7Y48LF8_dcRTpbynOzkpphaEMJj14/exec"; 
             const finalScoreText = studentScore + " / " + quizQuestions.length; const percentage = (studentScore / quizQuestions.length) * 100;
             const container = document.getElementById("quizContainer");
             container.innerHTML = `<div style="text-align: center; direction: rtl; padding: 20px;"><h1 style="color: #1d3557; font-size: 26px;">تم الانتهاء من اختبار اللغة العربية</h1><div style="font-size: 64px; font-weight: bold; color: #457b9d; margin: 20px 0;">%${percentage}</div><div style="color: #2a9d8f; font-size: 18px; font-weight: bold; margin-bottom: 15px;">تم تسجيل إجاباتك وإرسال الدرجة تلقائياً.</div><div style="font-size: 20px; color: #555555; margin-bottom: 10px;">أحسنت يا ${studentName}!</div><div style="font-size: 16px; color: #777;">لقد حصلت على درجة: ${finalScoreText}</div></div>`;
